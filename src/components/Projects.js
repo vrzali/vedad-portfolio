@@ -1,12 +1,20 @@
 import React from "react";
 import { projects } from "../data";
+import noteTaker from '../../src/assets/note_taker.png';
+import weatherDashboard from '../../src/assets/weather_dashboard.png';
+import zooKeepr from '../../src/assets/zoo_keepr.png';
+import humble from '../../src/assets/humble.png';
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCode } from '@fortawesome/free-solid-svg-icons'
+import { faDesktop } from '@fortawesome/free-solid-svg-icons'
 
 export default function Projects() {
   return (
     <section id="projects">
       <div>
         <div>
-          <h1>
+          <h1 class="title">
             Apps I've Built
           </h1>
           <p>
@@ -15,32 +23,57 @@ export default function Projects() {
             fuga dolore.
           </p>
         </div>
-        <div>
+        <div class="section">
           {projects.map((project) => (
-            <a
-              href={project.link}
-              key={project.image}
-              className="sm:w-1/2 w-100 p-4">
-              <div className="flex relative">
-                <img
-                  alt="gallery"
-                  className="absolute inset-0 w-full h-full object-cover object-center"
-                  src={project.image}
-                />
-                <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
-                  <h2 className="tracking-widest text-sm title-font font-medium text-green-400 mb-1">
-                    {project.subtitle}
-                  </h2>
-                  <h1 className="title-font text-lg font-medium text-white mb-3">
-                    {project.title}
-                  </h1>
-                  <p className="leading-relaxed">{project.description}</p>
+            <div class="columns is-half is-centered has-text-centered">
+              <div class="card column is-half mb-5">
+              <header class="card-header has-background-primary">
+                <p class="card-header-title has-text-white">
+                  {project.title}
+                </p>
+              </header>
+                <div class="card-image">
+                  <figure class="image is-3by2">
+                    <img src={getImagePath(project)}/>
+                  </figure>
+                </div>
+                <div class="card-content">
+                <div class="content">
+                    {project.description}
+                </div>
+                <a class="button is-primary mr-3" href={project.github_link}>
+                  <span class="icon">
+                    <FontAwesomeIcon icon={faCode}/>
+                  </span>
+                  <span>GitHub</span>
+                </a>
+                <a class="button is-primary mr-3" href={project.deployment_link}>
+                  <span class="icon">
+                    <FontAwesomeIcon icon={faDesktop}/>
+                  </span>
+                  <span>Deployment</span>
+                </a>
                 </div>
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </div>
     </section>
   );
+}
+
+function getImagePath(project) {
+  switch (project.id) {
+    case "note-taker":
+      return noteTaker;
+    case "weather-dashboard":
+      return weatherDashboard;
+    case "zoo-keepr":
+      return zooKeepr;
+    case "humble":
+      return humble;
+    default:
+      return "";
+  }
 }
