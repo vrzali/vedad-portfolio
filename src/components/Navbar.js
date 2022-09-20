@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Navbar() {
   return (
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+    <nav class="navbar is-fixed-top is-danger" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <a class="navbar-item">
           Vadad Rzali
