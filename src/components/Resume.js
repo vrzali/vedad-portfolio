@@ -6,7 +6,7 @@ import ResumePdf from "../assets/resume.pdf";
 export default function Resume() {
   return (
     <section id="resume">
-        <div class="section">
+        <div class="container">
           <h1 class="title">
             Resume
           </h1>

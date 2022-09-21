@@ -4,57 +4,32 @@ export const projects = [
     title: "Note Taker",
     subtitle: "some subtitle",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    github_link: "https://reactbootcamp.com",
-    deployment_link: "https://reactbootcamp.com",
+    github_link: "https://github.com/vrzali/ch11-note-taker",
+    deployment_link: "https://serene-eyrie-92563.herokuapp.com/",
   },
   {
     id: "weather-dashboard",
     title: "Weather Dashboard",
     subtitle: "some subtitle",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    github_link: "https://reactbootcamp.com",
-    deployment_link: "https://reactbootcamp.com",
+    github_link: "https://github.com/vrzali/weather-dashboard",
+    deployment_link: "https://vrzali.github.io/weather-dashboard/",
   },
   {
     id: "zoo-keepr",
     title: "Zoo Keepr",
     subtitle: "some subtitle",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    github_link: "https://reactbootcamp.com",
-    deployment_link: "https://reactbootcamp.com",
+    github_link: "https://github.com/vrzali/zookeepr",
+    deployment_link: "https://secret-woodland-64745.herokuapp.com/",
   },
   {
     id: "humble",
     title: "Humble",
     subtitle: "some subtitle",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    github_link: "https://reactbootcamp.com",
-    deployment_link: "https://reactbootcamp.com",
+    github_link: "https://github.com/tarequem/humble",
+    deployment_link: "https://glacial-wildwood-20620.herokuapp.com/",
   },
 ];
 
-export const testimonials = [
-  {
-    quote:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quod necessitatibus quidem impedit facilis? Distinctio laboriosam veritatis recusandae minus. Voluptatum accusantium hic laudantium soluta ea sapiente cupiditate officia maiores itaque.",
-    image: "https://randomuser.me/api/portraits/men/1.jpg",
-    name: "Jesse Hicks",
-    company: "Zoozle",
-  },
-  {
-    quote:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quod necessitatibus quidem impedit facilis? Distinctio laboriosam veritatis recusandae minus. Voluptatum accusantium hic laudantium soluta ea sapiente cupiditate officia maiores itaque.",
-    image: "https://randomuser.me/api/portraits/men/94.jpg",
-    name: "Ruben Alvarez",
-    company: "Dooble.io",
-  },
-];
-
-export const skills = [
-  "JavaScript",
-  "React",
-  "Next.js",
-  "Node",
-  "GraphQL",
-  "Material UI",
-];

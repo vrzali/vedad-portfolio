@@ -1,4 +1,8 @@
-import React from "react";
+import React from 'react';
+import { validateEmail } from '../utils/helpers';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCode } from '@fortawesome/free-solid-svg-icons'
+import { faNetworkWired } from '@fortawesome/free-solid-svg-icons'
 
 export default function Contact() {
   const [name, setName] = React.useState("");
@@ -24,10 +28,65 @@ export default function Contact() {
       .catch((error) => alert(error));
   }
 
+
   return (
     <section id="contact">
-      <div>
-        <div className="lg:w-2/3 md:w-1/2 bg-gray-900 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
+      <div class="section">
+        <form
+          name="test"
+          class="section"
+          onSubmit={handleSubmit}>
+          <h2 class="title">
+            Contact Me
+          </h2>
+          <div class="field">
+            <label htmlFor="name" class="label">
+              Name
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="input"
+              placeholder="Your Name"
+              onChange={(e) => setName(e.target.value)}
+            />
+          </div>
+          <div class="field">
+            <label htmlFor="email" class="label">
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="input"
+              placeholder="Email input"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+          
+          <div class="field">
+            <label
+              htmlFor="message"
+              class="label">
+              Message
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              class="textarea"
+              onChange={(e) => setMessage(e.target.value)}
+            />
+          </div>
+          <button
+            type="submit"
+            class="button is-link">
+            Submit
+          </button>
+        </form>
+      </div>
+      <div className="lg:w-2/3 md:w-1/2 bg-gray-900 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
           <iframe
             width="100%"
             height="100%"
@@ -37,87 +96,47 @@ export default function Contact() {
             marginHeight={0}
             marginWidth={0}
             style={{ filter: "opacity(0.7)" }}
-            src="https://www.google.com/maps/embed/v1/place?q=97+warren+st+new+york+city&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2885.006282688887!2d-79.40451798450107!3d43.689632779120124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3342a4cd09c9%3A0x2414ea1ac92091bd!2s609%20Avenue!5e0!3m2!1sen!2sca!4v1663634082450!5m2!1sen!2sca"
           />
           <div>
-            <div>
-              <h2>
-                ADDRESS
-              </h2>
-              <p className="mt-1">
-                609 Avenue Road <br />
-                Toronto, ON M4V0B1
-              </p>
-            </div>
-            <div>
-              <h2>
+            <div class="section">
+              <div class="columns is-half is-centered has-text-centered">
+                <div class="column is-half mb-5">
+                  <h2 class="subtitle">
+                    ADDRESS
+                  </h2>
+                    <p className="mt-1">
+                  609 Avenue Road <br />
+                  Toronto, ON M4V0B1
+                </p>
+                </div>
+                <div class="column is-half mb-5">
+                <div>
+              <h2 class="subtitle">
                 EMAIL
               </h2>
               <a>
-                reedbarger@email.com
+                vedad.rzali@gmail.com
               </a>
-              <h2>
-                PHONE
-              </h2>
-              <p>123-456-7890</p>
             </div>
+                </div>
+              </div>
+            </div>
+            
+            <a class="button is-primary mr-3" href="https://github.com/vrzali">
+                <span class="icon">
+                  <FontAwesomeIcon icon={faCode}/>
+                </span>
+                <span>GitHub</span>
+              </a>
+              <a class="button is-primary mr-3 mb-4" href="https://www.linkedin.com/in/vadadrzali/">
+                <span class="icon">
+                  <FontAwesomeIcon icon={faNetworkWired}/>
+                </span>
+                <span>LinkedIn</span>
+              </a>
           </div>
         </div>
-        <form
-          netlify
-          name="test"
-          onSubmit={handleSubmit}>
-          <h2>
-            Hire Me
-          </h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum
-            suscipit officia aspernatur veritatis. Asperiores, aliquid?
-          </p>
-          <div>
-            <label htmlFor="name">
-              Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-
-              onChange={(e) => setName(e.target.value)}
-            />
-          </div>
-          <div className="relative mb-4">
-            <label htmlFor="email" className="leading-7 text-sm text-gray-400">
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
-          <div className="relative mb-4">
-            <label
-              htmlFor="message"
-              className="leading-7 text-sm text-gray-400">
-              Message
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
-              onChange={(e) => setMessage(e.target.value)}
-            />
-          </div>
-          <button
-            type="submit"
-            className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-            Submit
-          </button>
-        </form>
-      </div>
     </section>
   );
 }
