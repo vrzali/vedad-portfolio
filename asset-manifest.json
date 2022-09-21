@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/vedad-portfolio/static/css/main.887fa90a.css",
+    "main.js": "/vedad-portfolio/static/js/main.10af673f.js",
+    "static/js/787.1ed0c42c.chunk.js": "/vedad-portfolio/static/js/787.1ed0c42c.chunk.js",
+    "static/media/zoo_keepr.png": "/vedad-portfolio/static/media/zoo_keepr.8687337737194a053d3e.png",
+    "static/media/humble.png": "/vedad-portfolio/static/media/humble.7798ce1a1e74847c49a6.png",
+    "static/media/weather_dashboard.png": "/vedad-portfolio/static/media/weather_dashboard.dc800d3c5cac96aaec1c.png",
+    "static/media/note_taker.png": "/vedad-portfolio/static/media/note_taker.7681d19d4db3f32e0650.png",
+    "static/media/resume.pdf": "/vedad-portfolio/static/media/resume.27fb16b62796ccee9d62.pdf",
+    "static/media/cover-image.JPG": "/vedad-portfolio/static/media/cover-image.8bffe25bd8f8ba0a622d.JPG",
+    "index.html": "/vedad-portfolio/index.html",
+    "main.887fa90a.css.map": "/vedad-portfolio/static/css/main.887fa90a.css.map",
+    "main.10af673f.js.map": "/vedad-portfolio/static/js/main.10af673f.js.map",
+    "787.1ed0c42c.chunk.js.map": "/vedad-portfolio/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.887fa90a.css",
+    "static/js/main.10af673f.js"
+  ]
+}
